@@ -122,7 +122,7 @@ function App() {
         </div>
 
         <div style={{ display: step === 4 ? "block" : "none" }}>
-          <h2>Congratulations you have submitted the form!</h2>
+          <h2>Thank you for completing the form</h2>
         </div>
       </div>
     </div>
