@@ -1,5 +1,5 @@
 body {
-  background-color: white
+  background-color: #eaeaea;
   ;
 }
 
@@ -19,12 +19,40 @@ body {
   height: auto;
   font-size: 2em;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 20px;;
+  background-color: white
+}
+
+.container label{
+  text-align: left;
+
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+  margin-right: 0.5em;
+}
+
+input {
+  font-size: 1em;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+  width: 40%;
 }
 
 button{
   font-size: 1em;
   margin: 20px;
+}
+
+#confirmation p {
+  text-align: left;
+}
+
+#confirmation p span {
+  display: inline-block;
+  width: 40%;
+  margin-right: 1em;
+  text-align: right;
 }
 
 @media only screen and (max-width: 600px){
@@ -35,7 +63,7 @@ button{
 .container{
   font-size: 1em;
   margin: auto;
-  width: 50%;
+  width: 80%;
   height: auto;
 }
 

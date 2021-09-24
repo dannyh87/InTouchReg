@@ -60,7 +60,7 @@ function App() {
   return (
     <div>
       <div class="title">
-        <h1>The Registration Form</h1>
+        <h1>Registration Form</h1>
       </div>
       <div class="container">
         <div style={{ display: step === 0 ? "block" : "none" }}>
@@ -78,7 +78,7 @@ function App() {
           <label>Phone Number</label>
           <input onChange={changePhoneNumber} value={phoneNumber} />
           <br />
-          <button onClick={next}>Next</button>
+          <button disabled={!firstName || !lastName || !phoneNumber} onClick={next}>Next</button>
           <br />
         </div>
 
@@ -91,17 +91,32 @@ function App() {
           {dobError && <p>{dobError}</p>}
           <br />
           <button onClick={prev}>Previous</button>
-          <button onClick={next} disabled={dobError}>
+          <button disabled={!email || !dob || dobError} onClick={next}>
             Next
           </button>
         </div>
 
-        <div style={{ display: step === 3 ? "block" : "none" }}>
-          <p>First Name: {firstName}</p>
-          <p>Last Name: {lastName}</p>
-          <p>Phone Number : {phoneNumber}</p>
-          <p>Email : {email}</p>
-          <p> Date of Birth : {dob}</p>
+        <div id="confirmation" style={{ display: step === 3 ? "block" : "none" }}>
+          <p>
+            <span>First Name: </span>
+            {firstName}
+          </p>
+          <p>
+            <span>Last Name: </span>
+            {lastName}
+          </p>
+          <p>
+            <span>Phone Number : </span>
+            {phoneNumber}
+          </p>
+          <p>
+            <span>Email : </span>
+            {email}
+          </p>
+          <p>
+            <span>Date of Birth : </span>
+            {dob}
+          </p>
           <button onClick={prev}>Previous</button>
           <button onClick={next}>Submit</button>
         </div>
