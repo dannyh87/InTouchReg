@@ -56,16 +56,18 @@ button{
 }
 
 @media only screen and (max-width: 600px){
-.title{
-  font-size: 2em;
-}
+  .title{
+    font-size: 2em;
+  }
 
-.container{
-  font-size: 1em;
-  margin: auto;
-  width: 80%;
-  height: auto;
-}
+  body{margin:0}
 
+  .container{
+    font-size: 1em;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+  }
 }
 
